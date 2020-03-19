@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+.App-body {
+  padding: 1vw;
+}
+
+.App-title {
+  display: flex;
+  align-items: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 40px;
+  margin-right: 1vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-kanban {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
 }
 
-.App-link {
-  color: #61dafb;
+.column {
+  /* padding: 8px; */
+  /* border: 1pt solid black; */
+  width: 250px;
+  /* margin-right: 10px; */
+  /* border-radius: 5px; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.column-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.add-button {
+  background-color: black;
+}
+
+.draggable {
+  background-color: #F7F6F3;
+}
+
+.droppable {
+  min-height: 30px;
+  transition: background-color 0.2s;
+}
+
+.was-validated .form-control:valid~.invalid-feedback {
+  display: none;
+}
+
+.assignee {
+  font-size: 10px;
+  height: 15px;
+  width: 15px;
+}
+
+.tags {
+  font-size: 10px;
+}
+
+.day {
+  font-size: 10px;
+  color: gray;
 }
