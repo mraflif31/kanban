@@ -111,6 +111,7 @@ class App extends Component {
         parsedDataContent = parsedDate.toString() + ' days';
       }
     } else {
+      const negativeParsedDate = - 1 * parsedDate;
       parsedDateStyle = {
         fontSize: 10,
         color: 'red',
@@ -118,7 +119,7 @@ class App extends Component {
       if (parsedDate === -1) {
         parsedDataContent = 'Yesterday';
       } else {
-        parsedDataContent = parsedDate.toString() + ' days ago';
+        parsedDataContent = negativeParsedDate.toString() + ' days ago';
       }
     }
     return <span style={parsedDateStyle} className="ml-auto font-weight-bold day my-auto">{parsedDataContent}</span>
